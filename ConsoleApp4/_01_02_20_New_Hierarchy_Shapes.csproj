@@ -58,8 +58,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Circle.cs" />
+    <Compile Include="BL.cs" />
     <Compile Include="ENUM\Action.cs" />
+    <Compile Include="Circle.cs" />
+    <Compile Include="Ellipse.cs" />
+    <Compile Include="ENUM\Direction.cs" />
     <Compile Include="Container.cs" />
     <Compile Include="ENUM\Constant.cs" />
     <Compile Include="Figure.cs" />

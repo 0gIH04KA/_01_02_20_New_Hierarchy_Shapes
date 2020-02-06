@@ -16,6 +16,34 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
         #endregion
 
+        #region ---===    Get / Set    ===---
+
+        public int ItemsCount
+        {
+            get
+            {
+                return _itemsCount;
+            }
+        }
+
+        public Figure this[int index]
+        {
+            get
+            {
+                return _figures[index];
+            }
+        }
+
+        public Figure[] Figures
+        {
+            get
+            {
+                return _figures;
+            }
+        }
+
+        #endregion
+
         #region ---===    Constructor    ===---
 
         public Container()
@@ -62,6 +90,8 @@ namespace _01_02_20_New_Hierarchy_Shapes
                 _figures[i].Show();
             }
         }
+
+        
 
         #endregion
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _01_02_20_New_Hierarchy_Shapes
 {
-    class Circle : Figure
+    class Circle : Ellipse
     {
         #region ---===    Private    ===---
 
@@ -38,9 +38,15 @@ namespace _01_02_20_New_Hierarchy_Shapes
         #region ---===    Constructor    ===---
 
         public Circle(int radius, int x, int y)
-            : base(x, y)
+            : base(radius, radius, x, y)
         {
-            Radius = radius;
+            _radius = radius;
+        }
+
+        public Circle(Circle circle)
+            : this(circle._radius, 
+                  circle._center.PosX, circle._center.PosY)
+        { 
         }
 
         #endregion
@@ -49,17 +55,12 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
         public override void Hide()
         {
-            throw new NotImplementedException();
-        }
-
-        public override void Move(int x, int y)
-        {
-            throw new NotImplementedException();
+            UI.PrintCircle(this, Console.BackgroundColor);
         }
 
         public override void Show()
         {
-            throw new NotImplementedException();
+            UI.PrintCircle(this);
         }
 
         #endregion
@@ -67,8 +68,6 @@ namespace _01_02_20_New_Hierarchy_Shapes
         #region ---===    IGeometrical    ===---
 
         #endregion
-
-       
 
     }
 }

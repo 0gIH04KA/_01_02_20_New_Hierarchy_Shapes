@@ -22,18 +22,15 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
         public override void Show()
         {
-            base.Show();
+            UI.PrintSquare(this);
         }
 
         public override void Hide()
         {
-            base.Hide();
+            UI.PrintSquare(this, Console.BackgroundColor);
         }
 
-        public override void Move(int x, int y)
-        {
-            base.Move(x, y);
-        }
+       
 
         #endregion
 
@@ -46,7 +43,7 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
         new public double GetPerimetr()
         {
-            return (4 * SideA );
+            return (4.0 * SideA );
         }
 
         #endregion

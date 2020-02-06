@@ -76,11 +76,20 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
         #region ---===    Metods    ===---
 
-        public abstract void Move(int x, int y);
+        public void Move(int x, int y)
+        {
+            MoveFigureTo(_center.PosX + x, _center.PosY + y);
+        }
 
         public abstract void Show();
 
         public abstract void Hide();
+
+        private void MoveFigureTo(int x, int y)
+        {
+            _center.PosX = x;
+            _center.PosY = y;
+        }
 
         #endregion
 

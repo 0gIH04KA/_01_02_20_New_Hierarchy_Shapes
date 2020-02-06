@@ -6,66 +6,48 @@ using System.Threading.Tasks;
 
 namespace _01_02_20_New_Hierarchy_Shapes
 {
-    class Triangle : Figure
+    class Ellipse : Figure, IGeometrical
     {
         #region ---===    Private    ===---
 
-        private int _sideA;
-        private int _sideB;
-        private int _sideC;
+        private int _minorAxis;
+        private int _majorAxis;
 
         #endregion
 
         #region ---===    Get / Set    ===---
 
-        public int SideA
+        public int MinorAxis
         {
             get 
             { 
-                return _sideA;
+                return _minorAxis;
             }
-            set
+            set 
             {
                 if (value <= 0)
                 {
-                    throw new MyException($"SideA = {value}");
+                    throw new MyException($"MinorAxis = {value}");
                 }
-                
-                _sideA = value;
+
+                _minorAxis = value; 
             }
         }
 
-        public int SideB
+        public int MajorAxis
         {
             get 
             { 
-                return _sideB;
+                return _majorAxis;
             }
-            set
+            set 
             {
                 if (value <= 0)
                 {
-                    throw new MyException($"SideB = {value}");
+                    throw new MyException($"MajorAxis = {value}");
                 }
 
-                _sideB = value;
-            }
-        }
-
-        public int SideC
-        {
-            get 
-            { 
-                return _sideC;
-            }
-            set
-            {
-                if (value <= 0)
-                {
-                    throw new MyException($"SideC = {value}");
-                }
-
-                _sideC = value;
+                _majorAxis = value; 
             }
         }
 
@@ -73,12 +55,17 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
         #region ---===    Constructor    ===---
 
-        public Triangle(int sideA, int sideB, int sideC, int x, int y)
-            : base(x, y)
+        public Ellipse(int minorAxis, int majorAxis, int x, int y)
+           : base(x, y)
         {
-            SideA = sideA;
-            SideB = sideB;
-            SideC = sideC;
+            _minorAxis = minorAxis;
+            _majorAxis = majorAxis;
+        }
+
+        public Ellipse(Ellipse ellipse)
+            : this(ellipse._minorAxis, ellipse._majorAxis, 
+                  ellipse._center.PosX, ellipse._center.PosY)
+        { 
         }
 
         #endregion
@@ -90,7 +77,7 @@ namespace _01_02_20_New_Hierarchy_Shapes
             throw new NotImplementedException();
         }
 
-       
+        
 
         public override void Show()
         {
@@ -101,9 +88,17 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
         #region ---===    IGeometrical    ===---
 
-        #endregion
-        
+        public double GetArea()
+        {
+            throw new NotImplementedException();
+        }
 
-        
+        public double GetPerimetr()
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
     }
 }

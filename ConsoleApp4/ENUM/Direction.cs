@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace _01_02_20_New_Hierarchy_Shapes
 {
-    public enum Action
+    [Flags]
+    public enum Direction
     {
         NoAction = 0x00,
 
-        ResizeIncrease =  0x01,
-        ResizeReduction = 0x02,
+        Right = 0x01,
+        Left = 0x02,
+        Up = 0x04,
+        Down = 0x08,
 
-        Tabulation = 0x04,
-
-        PressExit = 0xFFFF,
+        MoveAction = Right | Left | Up | Down,
     }
 }

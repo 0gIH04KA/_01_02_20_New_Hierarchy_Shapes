@@ -68,18 +68,12 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
         public override void Show()
         {
-
             UI.PrintRectangle(this);
         }
 
         public override void Hide()
         {
             UI.PrintRectangle(this, Console.BackgroundColor);
-        }
-
-        public override void Move(int x, int y)
-        {
-            throw new NotImplementedException();
         }
 
         #endregion
