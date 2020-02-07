@@ -253,6 +253,18 @@ namespace _01_02_20_New_Hierarchy_Shapes
             Console.Write(str);
         }
 
+        public static void ClearConsole()
+        {
+            for (int i = 0; i < Constant.MAX_WIDTH; i++)
+            {
+                for (int j = 0; j < Constant.MAX_HEIGHT; j++)
+                {
+                    Console.SetCursorPosition(i, j);
+                    Console.WriteLine(' ');
+                }
+            }
+        }
+
         #endregion
 
     }

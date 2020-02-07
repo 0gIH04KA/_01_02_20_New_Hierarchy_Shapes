@@ -76,9 +76,9 @@ namespace _01_02_20_New_Hierarchy_Shapes
         public Triangle(int sideA, int sideB, int sideC, int x, int y)
             : base(x, y)
         {
-            SideA = sideA;
-            SideB = sideB;
-            SideC = sideC;
+            _sideA = sideA;
+            _sideB = sideB;
+            _sideC = sideC;
         }
 
         #endregion

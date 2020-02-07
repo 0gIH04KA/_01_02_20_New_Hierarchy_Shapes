@@ -24,7 +24,7 @@ namespace _01_02_20_New_Hierarchy_Shapes
             }
             set
             {
-                if (value <= 0)
+                if (value < 0)
                 {
                     throw new MyException($"Radius = {value}");
                 }
@@ -65,7 +65,7 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
         public override void Resize(int size)
         {
-            _radius += size;
+            Radius += size;
         }
 
         #endregion

@@ -25,7 +25,7 @@ namespace _01_02_20_New_Hierarchy_Shapes
             }
             set
             {
-                if (value <= 0)
+                if (value < 0)
                 {
                     throw new MyException($"SideA = {value}");
                 }
@@ -42,7 +42,7 @@ namespace _01_02_20_New_Hierarchy_Shapes
             }
             set
             {
-                if (value <= 0)
+                if (value < 0)
                 {
                     throw new MyException($"SideB = {value}");
                 }
@@ -78,8 +78,8 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
         public override void Resize(int size)
         {
-            _sideA += size;
-            _sideB += size;
+            SideA += size;
+            SideB += size;
         }
 
         #endregion

@@ -32,8 +32,8 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
         public override void Resize(int size)
         {
-            _sideA += size;
-            _sideB += size;
+            SideA += size;
+            SideB += size;
         }
 
         #endregion

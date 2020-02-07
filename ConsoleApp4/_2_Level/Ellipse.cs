@@ -42,7 +42,7 @@ namespace _01_02_20_New_Hierarchy_Shapes
             }
             set 
             {
-                if (value <= 0)
+                if (value < 0)
                 {
                     throw new MyException($"MajorAxis = {value}");
                 }
@@ -84,8 +84,8 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
         public override void Resize(int size)
         {
-            _minorAxis += size;
-            _majorAxis += size;
+            MinorAxis += size;
+            MajorAxis += size;
         }
 
         #endregion
