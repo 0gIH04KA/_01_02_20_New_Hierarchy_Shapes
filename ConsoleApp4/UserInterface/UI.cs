@@ -225,5 +225,40 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
         #endregion
 
+        #region MyRegion
+
+        public static void PrintAreaAndPerimetr(Container container, int index, int posX, int posY)
+        {
+            PrintPerimetr(posY, Container.GetPerimetrThisFigures(container, index));
+            PrintArea(posY, Container.GetAreaThisFigures(container, index));
+        }
+
+        public static void PrintPerimetr(int posY, double perimetr)
+        {
+            Console.SetCursorPosition(0, posY - 3);
+            ClearLine();
+            Console.SetCursorPosition(0, posY - 3);
+            Console.Write($"Perimetr = {perimetr}");
+        }
+
+        public static void PrintArea(int posY, double area)
+        {
+            Console.SetCursorPosition(0, posY - 2);
+            ClearLine();
+            Console.SetCursorPosition(0, posY - 2);
+            Console.Write($"Area = {area}");
+        }
+
+        #endregion
+
+        public static void ClearLine()
+        {
+
+            for (int i = 0; i < Constant.MAX_WIDTH; i++)
+            {
+                Console.Write(' ');
+            }
+        }
+
     }
 }

@@ -168,8 +168,6 @@ namespace _01_02_20_New_Hierarchy_Shapes
                 {
                     Console.SetCursorPosition(i, j);
                     Console.WriteLine(' ');
-
-                    //System.Threading.Thread.Sleep(100);
                 }
             }
         }

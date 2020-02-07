@@ -26,11 +26,13 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
             Container container = new Container();
 
+            container.AddFigure(new Square(4, 30, 6));
+
             container.AddFigure(new Circle(2, 20, 11));
             container.AddFigure(new Circle(3, 4, 4));
             container.AddFigure(new Circle(4, 20, 4));
 
-            container.AddFigure(new Square(4, 30, 6));
+           
 
             #endregion
 
@@ -39,6 +41,8 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
             do
             {
+                UI.PrintAreaAndPerimetr(container, activeFigureId, 0, Constant.MAX_HEIGHT);
+
                 activeFigure.Color = ConsoleColor.Magenta;
 
                 for (int figureCounter = 0; figureCounter < container.ItemsCount; figureCounter++)
@@ -53,8 +57,8 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
 
                 //BL.ConsoleClear(Constant.MAX_WIDTH, Constant.MAX_HEIGHT-2);
+               
 
-                
             } while (action != Action.PressExit);
             
 

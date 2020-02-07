@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _01_02_20_New_Hierarchy_Shapes
 {
-    class Circle : Ellipse
+    class Circle : Ellipse, IGeometrical
     {
         #region ---===    Private    ===---
 
@@ -66,7 +66,15 @@ namespace _01_02_20_New_Hierarchy_Shapes
         #endregion
 
         #region ---===    IGeometrical    ===---
+        new public double GetArea()
+        {
+            return (Math.PI * Math.Pow(_radius, 2));
+        }
 
+        new public double GetPerimetr()
+        {
+            return (2.0 * Math.PI * _radius);
+        }
         #endregion
 
     }

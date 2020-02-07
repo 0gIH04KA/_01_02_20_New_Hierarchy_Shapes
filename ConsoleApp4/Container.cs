@@ -91,7 +91,41 @@ namespace _01_02_20_New_Hierarchy_Shapes
             }
         }
 
-        
+        public static double GetAreaThisFigures(Container container, int index)
+        {
+            double area;
+            IGeometrical geometrical = container.Figures[index] as IGeometrical;
+            
+            if (geometrical == null)
+            {
+                return 0.0;
+            }
+            else
+            {
+                area = geometrical.GetArea();
+            }
+
+            return area;
+        }
+
+        public static double GetPerimetrThisFigures(Container container, int index)
+        {
+            double perimetr;
+            IGeometrical geometrical = container.Figures[index] as IGeometrical;
+
+            if (geometrical == null)
+            {
+                return 0.0;
+            }
+            else
+            {
+                perimetr = geometrical.GetPerimetr();
+            }
+
+            return perimetr;
+        }
+
+
 
         #endregion
 

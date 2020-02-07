@@ -77,8 +77,6 @@ namespace _01_02_20_New_Hierarchy_Shapes
             throw new NotImplementedException();
         }
 
-        
-
         public override void Show()
         {
             throw new NotImplementedException();

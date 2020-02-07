@@ -58,23 +58,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BL.cs" />
+    <Compile Include="BusinessLogic\BL.cs" />
     <Compile Include="ENUM\Action.cs" />
-    <Compile Include="Circle.cs" />
-    <Compile Include="Ellipse.cs" />
+    <Compile Include="_3_Level\Circle.cs" />
+    <Compile Include="_2_Level\Ellipse.cs" />
     <Compile Include="ENUM\Direction.cs" />
     <Compile Include="Container.cs" />
     <Compile Include="ENUM\Constant.cs" />
-    <Compile Include="Figure.cs" />
+    <Compile Include="_1_Level\Figure.cs" />
     <Compile Include="Exception\MyException.cs" />
     <Compile Include="Interface\IGeometrical.cs" />
-    <Compile Include="Point.cs" />
+    <Compile Include="_1_Level\Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rectangle.cs" />
-    <Compile Include="Square.cs" />
-    <Compile Include="Triangle.cs" />
-    <Compile Include="UI.cs" />
+    <Compile Include="_2_Level\Rectangle.cs" />
+    <Compile Include="_3_Level\Square.cs" />
+    <Compile Include="_2_Level\Triangle.cs" />
+    <Compile Include="UserInterface\UI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
