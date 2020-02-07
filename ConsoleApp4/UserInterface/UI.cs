@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace _01_02_20_New_Hierarchy_Shapes
 {
-    // ToDo: добавить в методы ниже bool параметр который отвечает за заполнение отрисовки!! 
     class UI
     {
         #region ---===   Draw_Point   ===---
@@ -44,9 +43,9 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
         public static void PrintRectangle(Rectangle rectangle, ConsoleColor color)
         {
-            for (int i = rectangle.Center.PosX; i < rectangle.SideA; i++)
+            for (int i = 0; i <= rectangle.SideA; i++)
             {
-                for (int j = rectangle.Center.PosY; j < rectangle.SideB; j++)
+                for (int j = 0; j <= rectangle.SideB; j++)
                 {
                     PrintPoint(rectangle.Center.PosX + i,
                                rectangle.Center.PosY + j,
@@ -225,7 +224,7 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
         #endregion
 
-        #region MyRegion
+        #region ---===   Draw Area / Perimetr   ===---
 
         public static void PrintAreaAndPerimetr(Container container, int index, int posX, int posY)
         {
@@ -237,7 +236,6 @@ namespace _01_02_20_New_Hierarchy_Shapes
         {
             Console.SetCursorPosition(0, posY - 3);
             ClearLine();
-            Console.SetCursorPosition(0, posY - 3);
             Console.Write($"Perimetr = {perimetr}");
         }
 
@@ -245,20 +243,17 @@ namespace _01_02_20_New_Hierarchy_Shapes
         {
             Console.SetCursorPosition(0, posY - 2);
             ClearLine();
-            Console.SetCursorPosition(0, posY - 2);
             Console.Write($"Area = {area}");
         }
 
-        #endregion
-
         public static void ClearLine()
         {
+            string str = "                                                                                                                       \r"; //пробелы для очистки строки
 
-            for (int i = 0; i < Constant.MAX_WIDTH; i++)
-            {
-                Console.Write(' ');
-            }
+            Console.Write(str);
         }
+
+        #endregion
 
     }
 }

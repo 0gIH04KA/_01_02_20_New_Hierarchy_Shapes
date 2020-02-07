@@ -22,17 +22,17 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
             #endregion
 
-            #region ---===   ContainerFigures   ===---
+            #region ---===   Container Figures   ===---
 
             Container container = new Container();
 
-            container.AddFigure(new Square(4, 30, 6));
+            container.AddFigure(Container.NewRectangle(new Point(30, 15), 7, 4));
 
-            container.AddFigure(new Circle(2, 20, 11));
-            container.AddFigure(new Circle(3, 4, 4));
-            container.AddFigure(new Circle(4, 20, 4));
+            container.AddFigure(Container.NewSquare(new Point(30, 6), 4));
 
-           
+            container.AddFigure(Container.NewCircle(new Point(20, 11), 2));
+            container.AddFigure(Container.NewCircle(new Point(4, 4), 3));
+            container.AddFigure(Container.NewCircle(new Point(20, 4), 4));
 
             #endregion
 
@@ -45,28 +45,14 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
                 activeFigure.Color = ConsoleColor.Magenta;
 
-                for (int figureCounter = 0; figureCounter < container.ItemsCount; figureCounter++)
-                {
-                    container[figureCounter].Show();
-                }
+                container.Show();
 
                 ConsoleKey key = Console.ReadKey().Key;
 
                 BL.SetActualKey(key, ref direction, ref action);
                 BL.ButtonsEngine(container, ref activeFigure, ref activeFigureId, direction, action);
 
-
-                //BL.ConsoleClear(Constant.MAX_WIDTH, Constant.MAX_HEIGHT-2);
-               
-
             } while (action != Action.PressExit);
-            
-
-            Console.SetCursorPosition(0, Constant.MAX_HEIGHT-2);
-            //Console.WriteLine($"P = {container[3].GetPerimetr()}");
-            //Console.WriteLine($"S = {obj.GetArea()}");
-
-            Console.ReadKey();
 
         }
     }

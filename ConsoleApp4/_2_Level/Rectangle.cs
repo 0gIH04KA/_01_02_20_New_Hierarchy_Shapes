@@ -8,10 +8,10 @@ namespace _01_02_20_New_Hierarchy_Shapes
 {
     class Rectangle : Figure, IGeometrical
     {
-        #region ---===    Private    ===---
+        #region ---===    Protected    ===---
 
-        private int _sideA;
-        private int _sideB;
+        protected int _sideA;
+        protected int _sideB;
 
         #endregion
 
@@ -58,8 +58,8 @@ namespace _01_02_20_New_Hierarchy_Shapes
         public Rectangle(int sideA, int sideB, int x, int y)
             : base(x, y)
         {
-            SideA = sideA;
-            SideB = sideB;
+            _sideA = sideA;
+            _sideB = sideB;
         }
 
         #endregion
@@ -76,18 +76,24 @@ namespace _01_02_20_New_Hierarchy_Shapes
             UI.PrintRectangle(this, Console.BackgroundColor);
         }
 
+        public override void Resize(int size)
+        {
+            _sideA += size;
+            _sideB += size;
+        }
+
         #endregion
 
         #region ---===    IGeometrical    ===---
 
         public double GetArea()
         {
-            return (SideA * SideB);
+            return (_sideA * _sideB);
         }
 
         public double GetPerimetr()
         {
-            return (2 * (SideA + SideB));
+            return (2 * (_sideA + _sideB));
         }
 
         #endregion

@@ -63,7 +63,7 @@
     <Compile Include="_3_Level\Circle.cs" />
     <Compile Include="_2_Level\Ellipse.cs" />
     <Compile Include="ENUM\Direction.cs" />
-    <Compile Include="Container.cs" />
+    <Compile Include="Container\Container.cs" />
     <Compile Include="ENUM\Constant.cs" />
     <Compile Include="_1_Level\Figure.cs" />
     <Compile Include="Exception\MyException.cs" />
@@ -91,5 +91,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

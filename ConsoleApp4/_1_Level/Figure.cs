@@ -74,7 +74,7 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
         #endregion
 
-        #region ---===    Metods    ===---
+        #region ---===    Methods    ===---
 
         public void Move(int x, int y)
         {
@@ -84,6 +84,8 @@ namespace _01_02_20_New_Hierarchy_Shapes
         public abstract void Show();
 
         public abstract void Hide();
+
+        public abstract void Resize(int size);
 
         private void MoveFigureTo(int x, int y)
         {

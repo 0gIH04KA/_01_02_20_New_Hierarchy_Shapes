@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _01_02_20_New_Hierarchy_Shapes
 {
-    class Triangle : Figure
+    class Triangle : Figure 
     {
         #region ---===    Private    ===---
 
@@ -90,9 +90,12 @@ namespace _01_02_20_New_Hierarchy_Shapes
             throw new NotImplementedException();
         }
 
-       
-
         public override void Show()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Resize(int size)
         {
             throw new NotImplementedException();
         }
@@ -102,8 +105,6 @@ namespace _01_02_20_New_Hierarchy_Shapes
         #region ---===    IGeometrical    ===---
 
         #endregion
-        
 
-        
     }
 }

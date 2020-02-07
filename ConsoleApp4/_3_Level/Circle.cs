@@ -63,9 +63,15 @@ namespace _01_02_20_New_Hierarchy_Shapes
             UI.PrintCircle(this);
         }
 
+        public override void Resize(int size)
+        {
+            _radius += size;
+        }
+
         #endregion
 
         #region ---===    IGeometrical    ===---
+
         new public double GetArea()
         {
             return (Math.PI * Math.Pow(_radius, 2));
@@ -75,6 +81,7 @@ namespace _01_02_20_New_Hierarchy_Shapes
         {
             return (2.0 * Math.PI * _radius);
         }
+
         #endregion
 
     }

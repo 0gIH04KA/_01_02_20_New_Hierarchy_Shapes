@@ -30,7 +30,11 @@ namespace _01_02_20_New_Hierarchy_Shapes
             UI.PrintSquare(this, Console.BackgroundColor);
         }
 
-       
+        public override void Resize(int size)
+        {
+            _sideA += size;
+            _sideB += size;
+        }
 
         #endregion
 
@@ -38,12 +42,12 @@ namespace _01_02_20_New_Hierarchy_Shapes
 
         new public double GetArea()
         {
-            return (SideA * SideA);
+            return (_sideA * _sideA);
         }
 
         new public double GetPerimetr()
         {
-            return (4.0 * SideA );
+            return (4.0 * _sideA);
         }
 
         #endregion

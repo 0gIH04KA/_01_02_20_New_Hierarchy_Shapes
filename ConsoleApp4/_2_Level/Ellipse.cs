@@ -82,18 +82,25 @@ namespace _01_02_20_New_Hierarchy_Shapes
             throw new NotImplementedException();
         }
 
+        public override void Resize(int size)
+        {
+            _minorAxis += size;
+            _majorAxis += size;
+        }
+
         #endregion
 
         #region ---===    IGeometrical    ===---
 
         public double GetArea()
         {
-            throw new NotImplementedException();
+            return (Math.PI * _majorAxis * _minorAxis);
         }
 
         public double GetPerimetr()
         {
-            throw new NotImplementedException();
+            return (2.0 * Math.PI * Math.Sqrt( (Math.Pow(_majorAxis, 2) + Math.Pow(_minorAxis, 2) ) / 2.0)); 
+            //2 * pi * Sqrt( (majorAxis^2 + minorAxis^2) / 2)
         }
 
         #endregion

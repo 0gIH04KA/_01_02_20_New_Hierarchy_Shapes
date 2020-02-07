@@ -61,18 +61,10 @@ namespace _01_02_20_New_Hierarchy_Shapes
             PosY = y;
         }
 
-
         public Point(Point point)
             : this(point.PosX, point.PosY)
         {
         }
-
-
-        #endregion
-
-        #region ---===    Method    ===---
-
-
 
         #endregion
 

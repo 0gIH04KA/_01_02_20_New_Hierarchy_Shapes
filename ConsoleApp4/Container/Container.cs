@@ -91,11 +91,15 @@ namespace _01_02_20_New_Hierarchy_Shapes
             }
         }
 
+        #endregion
+
+        #region ---===    IGeometrical    ===---
+
         public static double GetAreaThisFigures(Container container, int index)
         {
             double area;
             IGeometrical geometrical = container.Figures[index] as IGeometrical;
-            
+
             if (geometrical == null)
             {
                 return 0.0;
@@ -125,56 +129,79 @@ namespace _01_02_20_New_Hierarchy_Shapes
             return perimetr;
         }
 
-
-
         #endregion
 
         #region ---===    New Figure    ===---
 
-        //  Rectangle
-        public static Rectangle NewRectangle(Point point, int sideA, int sideB)
-        {
-            return new Rectangle(sideA, sideB, point.PosX, point.PosY);
-        }
+            #region ---===    Rectangle    ===---
 
-        public static Rectangle NewRectangle(int x, int y, int sideA, int sideB)
-        {
-            return new Rectangle(sideA, sideB, x, y);
-        }
+                public static Rectangle NewRectangle(Point point, int sideA, int sideB)
+                {
+                    return new Rectangle(sideA, sideB, point.PosX, point.PosY);
+                }
 
-        //  Square
-        public static Square NewSquare(Point point, int sideA)
-        {
-            return new Square(sideA, point.PosX, point.PosY);
-        }
+                public static Rectangle NewRectangle(int x, int y, int sideA, int sideB)
+                {
+                    return new Rectangle(sideA, sideB, x, y);
+                }
 
-        public static Square NewSquare(int x, int y, int sideA)
-        {
-            return new Square(sideA, x, y);
-        }
+        #endregion
 
-        //  Triangle
-        public static Triangle NewTriangle(Point point, int sideA)
-        {
-            throw new MyException("Дописать)"); //ToDo: Дописать)
-        }
+            #region ---===    Square    ===---
 
-        public static Triangle NewTriangle(int x, int y, int sideA)
-        {
-            throw new MyException("Дописать)"); //ToDo: Дописать)
-        }
+                public static Square NewSquare(Point point, int sideA)
+                {
+                    return new Square(sideA, point.PosX, point.PosY);
+                }
 
+                public static Square NewSquare(int x, int y, int sideA)
+                {
+                    return new Square(sideA, x, y);
+                }
 
-        //  Circle
-        public static Circle NewCircle(Point point, int sideA)
-        {
-            throw new MyException("Дописать)"); //ToDo: Дописать)
-        }
+            #endregion
 
-        public static Circle NewCircle(int x, int y, int sideA)
-        {
-            throw new MyException("Дописать)"); //ToDo: Дописать)
-        }
+            #region ---===    Triangle    ===--- 
+
+                public static Triangle NewTriangle(Point point, int sideA)
+                {
+                    throw new MyException("Дописать)"); 
+                }
+
+                public static Triangle NewTriangle(int x, int y, int sideA)
+                {
+                    throw new MyException("Дописать)"); 
+                }
+
+            #endregion
+
+            #region ---===    Ellipse    ===---
+
+                public static Ellipse NewEllipse(Point point, int minorAxis, int majorAxis)
+                {
+                    return new Ellipse(minorAxis, majorAxis, point.PosX, point.PosY);
+                }
+
+                public static Ellipse NewEllipse(int x, int y, int minorAxis, int majorAxis)
+                {
+                    return new Ellipse(minorAxis, majorAxis, x, y);
+                }
+
+            #endregion
+
+            #region ---===    Circle    ===---
+
+                public static Circle NewCircle(Point point, int radius)
+                {
+                    return new Circle(radius, point.PosX, point.PosY);
+                }
+
+                public static Circle NewCircle(int x, int y, int radius)
+                {
+                    return new Circle(radius, x, y);
+                }
+
+            #endregion
 
         #endregion
 
